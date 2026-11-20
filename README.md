@@ -58,3 +58,17 @@ Frames are not shown in a window (`cv2.imshow` is commented out). Progress is sa
 - The script was originally a Colab notebook export; the Colab-specific lines are commented out.
 - The `yolov8m.pt` file is included but not used by the current code. Change `YOLO("yolov8n.pt")` to use it (slower, usually more accurate).
 - Demo videos are included in the repo, and the file sizes may make cloning slower.
+
+## Pretrained YOLO weights (not included)
+
+The following off-the-shelf Ultralytics checkpoints were removed from this repository because they are publicly downloadable. The code loads them by name, and Ultralytics downloads them automatically on first use:
+
+- `yolov8m.pt`
+- `yolov8n.pt`
+
+```python
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # downloaded automatically if not present
+```
+
+Or download them manually from https://github.com/ultralytics/assets/releases
